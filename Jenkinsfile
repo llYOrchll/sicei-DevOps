@@ -13,7 +13,7 @@ pipeline {
         }
         stage ("Build"){
             steps{
-                sh 'install python3 -y'
+                sh 'install python3'
                 sh 'install fastapi'
             }
         }
