@@ -5,7 +5,7 @@ pipeline {
         stage ("Clone"){
             steps{
                 git(
-                    url: https://github.com/llYOrchll/sicei-DevOps.git",
+                    url: "https://github.com/llYOrchll/sicei-DevOps.git",
                     branch: "main",
                     changelog: true,
                     poll: true
