@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-    
+    agent {
+      docker {
+        image 'python:3'
+        label 'sicei-devops'
+      }
+    }
     stages {
         stage ("Clone"){
             steps{
