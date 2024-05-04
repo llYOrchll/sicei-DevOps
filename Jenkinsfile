@@ -14,12 +14,12 @@ pipeline {
         }
         stage ("Build"){
             steps{
-                pip install fastapi
+                sh pip install fastapi
             }
         }
         stage ("Deploy"){
             steps{
-                docker build -t sicei-app .
+                sh docker build -t sicei-app .
             }
         }
     }
