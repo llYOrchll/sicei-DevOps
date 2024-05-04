@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-      dockerContainer {
-        image 'python:3'
-        label 'sicei-devops'
-      }
-    }
+    agent any
     stages {
         stage ("Clone"){
             steps{
@@ -18,6 +13,7 @@ pipeline {
         }
         stage ("Build"){
             steps{
+                apt install python3 -y
                 sh 'pip install fastapi'
             }
         }
