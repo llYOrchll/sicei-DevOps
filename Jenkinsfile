@@ -13,7 +13,7 @@ pipeline {
         }
         stage ("Build"){
             steps{
-                sh 'pip3 install fastapi'
+                sh 'apt install fastapi'
             }
         }
         stage ("Deploy"){
